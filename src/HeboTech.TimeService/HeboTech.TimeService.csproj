@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>HeboTech</Authors>
+    <Product>HeboTech TimeService</Product>
+    <Description>Configurable and simple time service for .Net that makes it easy to unit test your code.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/hbjorgo/TimeService</PackageProjectUrl>
+    <PackageReleaseNotes>https://github.com/hbjorgo/TimeService/releases</PackageReleaseNotes>
+    <PackageTags>time timeservice time-service</PackageTags>
+    <RepositoryUrl>https://github.com/hbjorgo/TimeService</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
