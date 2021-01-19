@@ -39,6 +39,4 @@ testProvider.Elapse(TimeSpan.FromDays(1));
 Assert.AreEqual(testTime.AddDays(1), TimeService.UtcNow);
 ```
 
-For more examples, check out the TestConsole project in the code.
-
 Feedback is welcome 🙂
