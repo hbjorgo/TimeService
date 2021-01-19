@@ -1,2 +1,2 @@
 # TimeService
-Testable and configurable time service for .Net.
+Testable and configurable time service for .NET.
