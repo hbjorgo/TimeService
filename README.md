@@ -5,6 +5,8 @@
 
 Configurable and simple time service for .Net that makes it easy to unit test your code.
 
+Feedback is welcome 🙂
+
 ## Usage
 Install as NuGet package
 ```shell
@@ -40,5 +42,3 @@ Assert.AreEqual(testTime.AddDays(1), TimeService.UtcNow);
 ```
 ## Building
 Note that Git is required in the path to build the project from source because of a NuGet package used for versioning.
-
-Feedback is welcome 🙂
