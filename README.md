@@ -38,5 +38,7 @@ testProvider.Elapse(TimeSpan.FromDays(1));
 // TimeService returns the new time
 Assert.AreEqual(testTime.AddDays(1), TimeService.UtcNow);
 ```
+## Building
+Note that Git is required in the path to build the project from source because of a NuGet package used for versioning.
 
 Feedback is welcome 🙂
