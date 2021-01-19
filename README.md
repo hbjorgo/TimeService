@@ -14,7 +14,7 @@ dotnet add package HeboTech.TimeService
 Example usage in production code
 ```csharp
 // Set up during application startup
-TimeService.SetTimeProvider(new SystemTimeProvider());
+TimeService.SetProvider(new SystemTimeProvider());
 
 // Use as a static service
 DateTime time = TimeService.UtcNow;
@@ -25,7 +25,7 @@ Example usage when running unit tests
 // Set up during test initialization
 DateTime testTime = new DateTime(2020, 1, 1, 12, 0, 0, DateTimeKind.Utc);
 ManualTimeProvider testProvider = new ManualTimeProvider(testTime);
-TimeService.SetTimeProvider(testProvider);
+TimeService.SetProvider(testProvider);
 
 // Unit testing:
 
@@ -33,7 +33,7 @@ TimeService.SetTimeProvider(testProvider);
 Assert.AreEqual(testTime, TimeService.UtcNow);
 
 // Add a TimeSpan to the current time
-provider.Elapse(TimeSpan.FromDays(1));
+testProvider.Elapse(TimeSpan.FromDays(1));
 
 // TimeService returns the new time
 Assert.AreEqual(testTime.AddDays(1), TimeService.UtcNow);
