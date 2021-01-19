@@ -3,7 +3,7 @@
 [![Nuget](https://img.shields.io/nuget/v/HeboTech.TimeService)](https://www.nuget.org/packages/HeboTech.TimeService/)
 [![Nuget](https://img.shields.io/nuget/dt/HeboTech.TimeService)](https://www.nuget.org/packages/HeboTech.TimeService/)
 
-Testable and configurable time service for .Net.
+Configurable and simple time service for .Net that makes it easy to unit test your code.
 
 ## Usage
 Install as NuGet package
