@@ -29,7 +29,7 @@ DateTime startTime = new DateTime(2020, 1, 2);
 TimeService.Set(() => startTime);
 
 // TimeService returns the set time
-Assert.AreEqual(startTime, TimeService.Now);
+Assert.Equal(startTime, TimeService.Now);
 
 // Set a new time
 DateTime newTime = new DateTime(2021, 2, 3);
