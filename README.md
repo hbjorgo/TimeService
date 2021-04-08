@@ -35,5 +35,6 @@ Assert.AreEqual(startTime, TimeService.Now);
 DateTime newTime = new DateTime(2021, 2, 3);
 TimeService.Set(() => newTime);
 
+// TimeSErvice returns the new time
 Assert.Equal(newTime, TimeService.Now);
 ```
