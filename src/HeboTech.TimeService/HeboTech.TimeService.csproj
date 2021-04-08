@@ -8,15 +8,8 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/hbjorgo/TimeService</PackageProjectUrl>
     <PackageReleaseNotes>https://github.com/hbjorgo/TimeService/releases</PackageReleaseNotes>
-    <PackageTags>time timeservice time-service</PackageTags>
+    <PackageTags>time timeservice time-service timefunc time-func</PackageTags>
     <RepositoryUrl>https://github.com/hbjorgo/TimeService</RepositoryUrl>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="MinVer" Version="2.4.0">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
 
 </Project>
