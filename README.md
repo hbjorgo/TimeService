@@ -16,29 +16,25 @@ dotnet add package HeboTech.TimeService
 Example usage in production code
 ```csharp
 // Set up during application startup
-TimeService.SetProvider(new SystemTimeProvider());
+TimeService.Set(TimeProviders.SystemTime);
 
 // Use as a static service
-DateTime time = TimeService.UtcNow;
+DateTime time = TimeService.Now;
 ```
 
 Example usage when running unit tests
 ```csharp
-// Set up during test initialization
-DateTime testTime = new DateTime(2020, 1, 1, 12, 0, 0, DateTimeKind.Utc);
-ManualTimeProvider testProvider = new ManualTimeProvider(testTime);
-TimeService.SetProvider(testProvider);
-
-// Unit testing:
+// Set the time
+DateTime startTime = new DateTime(2020, 1, 2);
+TimeService.Set(() => startTime);
 
 // TimeService returns the set time
-Assert.AreEqual(testTime, TimeService.UtcNow);
+Assert.AreEqual(startTime, TimeService.Now);
 
-// Add a TimeSpan to the current time
-testProvider.Elapse(TimeSpan.FromDays(1));
+// Set a new time
+DateTime newTime = new DateTime(2021, 2, 3);
+TimeService.Set(() => newTime);
 
 // TimeService returns the new time
-Assert.AreEqual(testTime.AddDays(1), TimeService.UtcNow);
+Assert.Equal(newTime, TimeService.Now);
 ```
-## Building
-Note that Git is required in the path to build the project from source because of a NuGet package used for versioning.
