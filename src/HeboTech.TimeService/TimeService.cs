@@ -4,23 +4,10 @@ namespace HeboTech.TimeService
 {
     public static class TimeService
     {
-        private static ITimeProvider s_provider;
+        private static Func<DateTime> timeFunc;
+        public static DateTime Now => timeFunc();
 
-        public static DateTime UtcNow => s_provider.UtcNow;
-
-        public static void SetProvider(ITimeProvider provider)
-        {
-            if (provider == null)
-            {
-                throw new ArgumentNullException(nameof(provider));
-            }
-
-            if (provider.UtcNow.Kind != DateTimeKind.Utc)
-            {
-                throw new ArgumentException("Time must be in UTC format");
-            }
-
-            s_provider = provider;
-        }
+        public static void Set(Func<DateTime> timeFunc) =>
+            TimeService.timeFunc = timeFunc ?? throw new ArgumentNullException(nameof(timeFunc));
     }
 }
