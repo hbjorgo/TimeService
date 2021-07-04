@@ -30,8 +30,5 @@ namespace HeboTech.TimeService.Tests
 
             Assert.Equal(DateTimeKind.Utc, now.Kind);
         }
-
-        private static bool IsWithinRange(DateTime time, TimeSpan range) =>
-            time > time - range && time < time + range;
     }
 }
