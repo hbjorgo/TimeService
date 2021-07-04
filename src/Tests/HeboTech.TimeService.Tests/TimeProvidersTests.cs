@@ -12,7 +12,7 @@ namespace HeboTech.TimeService.Tests
         {
             DateTime now = TimeProviders.SystemTime();
 
-            Assert.True(IsWithinRange(now, range));
+            Assert.True(now.IsWithinRange(DateTime.Now, range));
         }
 
         [Fact]
@@ -20,7 +20,7 @@ namespace HeboTech.TimeService.Tests
         {
             DateTime now = TimeProviders.SystemTimeUtc();
 
-            Assert.True(IsWithinRange(now, range));
+            Assert.True(now.IsWithinRange(DateTime.UtcNow, range));
         }
 
         [Fact]
