@@ -9,7 +9,7 @@ namespace HeboTech.TimeService
         /// <summary>
         /// Gets a DateTime object that represents the current time
         /// </summary>
-        public static DateTime Now => timeFunc();
+        public static DateTime Now => timeFunc?.Invoke() ?? throw new TimeProviderNotSetException("Time provider is not set");
 
         /// <summary>
         /// Sets the current time. The func can either return a constant time, or a dynamic one (like DateTime.Now).

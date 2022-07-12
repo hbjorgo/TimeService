@@ -10,7 +10,7 @@ namespace HeboTech.TimeService.Tests
         [Fact]
         public void A_SystemTime_now_throws_exception_when_provider_is_not_set_test()
         {
-            Assert.Throws<NullReferenceException>(() => TimeService.Now);
+            Assert.Throws<TimeProviderNotSetException>(() => TimeService.Now);
         }
 
         [Fact]
